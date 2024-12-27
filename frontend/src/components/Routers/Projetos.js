@@ -11,7 +11,7 @@ export default function Projetos() {
         <RenameTitle initialTitle={"C&Lio - Projetos"} />
         <header>
           <h1> projetos</h1>
-          <p>Aqui esta alguns do meu projetos</p>
+          <p>Aqui esta alguns do meu projetos.</p>
         </header>
 
         <section>
