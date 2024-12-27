@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 70%;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #ffffff;
+  min-height: calc(100vh - var(--heightNavBar) - 130px);
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+  }
+}

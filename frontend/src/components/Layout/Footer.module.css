@@ -1,0 +1,44 @@
+:root {
+  --colorText: #5e5e5e;
+}
+
+.main {
+  color: var(--colorText);
+  text-align: center;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin: 15px 0;
+  height: var(--heightmain);
+  bottom: 0;
+}
+.main section:nth-child(1) {
+  display: inline-flex;
+  gap: 15px;
+}
+.main section:nth-child(2) {
+  flex-direction: column;
+}
+
+.main section a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--colorText);
+  text-decoration: none;
+  
+}
+.main span,
+.main svg {
+  color: var(--cor60);
+  transition: all 0.5s;
+}
+.main span:hover,
+.main svg:hover {
+  color: var(--cor30);
+}

@@ -1,0 +1,192 @@
+:root {
+  --velocidadeMenu: 1s;
+}
+
+.main {
+  height: var(--heightNavBar);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.main nav {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.main nav > a {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bolder;
+  background-color: var(--cor30);
+  padding: 10px 5px;
+  color: var(--cor60);
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+.main nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  height: 100%;
+}
+.main nav ul a {
+  text-decoration: none;
+  color: var(--cor60);
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.1s;
+  width: 100px;
+  font-size: 16px;
+}
+.main nav ul a:hover {
+  font-size: 17px;
+}
+
+.menuMobile {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: initial;
+}
+
+nav > ul > a:hover:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 50%;
+  height: 5%;
+  animation: hoverButton 0.7s linear infinite;
+  z-index: -1;
+}
+
+@keyframes hoverButton {
+  from {
+    left: -150%;
+    background-color: var(--cor60);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    left: 150%;
+    background-color: var(--cor30);
+  }
+}
+.MenuBtn {
+  display: flex;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: initial;
+  filter: drop-shadow(1px 1px 3px rgb(8, 8, 8));
+}
+.MenuBtn.btnOpen {
+  animation: rotate var(--velocidadeMenu) linear;
+  animation-fill-mode: forwards; /* Mantém o último quadro da animação */
+}
+.MenuBtn.btnClose {
+  animation: rotateInverso var(--velocidadeMenu) linear;
+  animation-fill-mode: forwards; /* Mantém o último quadro da animação */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateInverso {
+  100% {
+    transform: rotate(-360deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    background-color: var(--cor30);
+  }
+  .main .menuMobile {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: inherit;
+    overflow: hidden;
+    z-index: 10000;
+    background-color: var(--cor30);
+  }
+  .main .menuMobile > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .main .menuMobile.openMenu {
+    animation: openMenu var(--velocidadeMenu) linear;
+    height: 150px;
+  }
+  .main .menuMobile.closeMenu {
+    animation: closeMenu var(--velocidadeMenu) linear;
+    height: 0px;
+  }
+  .main .menuMobile.closeMenu > a {
+    color: transparent;
+    transition: color 0.4s linear;
+  }
+  .main .menuMobile.openMenu > a {
+    transition: all 0.8s linear 0.4s;
+  }
+
+  @keyframes openMenu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 150px;
+    }
+  }
+  @keyframes closeMenu {
+    0% {
+      height: 150px;
+    }
+    100% {
+      height: 0;
+    }
+  }
+
+  .main nav > a {
+    
+    filter: none;
+  }
+}
