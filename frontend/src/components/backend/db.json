@@ -1,0 +1,44 @@
+{
+  "Projetos": [
+    {
+      "id": "1",
+      "like": 3,
+      "nome": "Login e Cadastro de Usuário",
+      "descricao": "Um sistema completo de CRUD desenvolvido em PHP, com dois tipos de login: cliente e administrador.",
+      "tecnologias": "HTML, CSS, JavaScript, SweetAlert2, ViaCEP, PHP, SQL.",
+      "site": "",
+      "imagem": "https://celiotech.netlify.app/img/bancodedados_1_11zon.webp",
+      "repositorio": "https://github.com/CelioDS/Projetos-PHP/tree/main/loginBanco"
+    },
+    {
+      "id": "2",
+      "like": 0,
+      "nome": "Jogo trol run",
+      "descricao": "Objetivo do jogo e conseguir o maior ponto possivel e desviar dos obstaculo.",
+      "tecnologias": "HTML, CSS, JavaScript, PHP, SQL.",
+      "site": "http://jogotrol.space/",
+      "imagem": "https://celiotech.netlify.app/img/jogotrol_3_11zon.webp",
+      "repositorio": "https://github.com/CelioDS/Projetos-PHP/tree/main/jogomario"
+    },
+    {
+      "id": "3",
+      "like": 0,
+      "nome": "finan01ceiro",
+      "descricao": "Sistem consta com um API rest e um banco de dados SQL.",
+      "tecnologias": "HTML, CSS, JavaScript, RectJS, NodeJS e SQL.",
+      "site": "https://finan01ceiro.netlify.app/",
+      "imagem": "",
+      "repositorio": "https://github.com/CelioDS/AppReciclagem-"
+    },
+    {
+      "id": "",
+      "like": 0,
+      "nome": "",
+      "descricao": "",
+      "tecnologias": "",
+      "imagem": "",
+      "site": "",
+      "repositorio": ""
+    }
+  ]
+}

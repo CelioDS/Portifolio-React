@@ -1,7 +1,7 @@
 import "./App.css";
 import { Outlet } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Footer from "./components/Layout/Footer";
 import NavBar from "./components/Layout/NavBar";
 
@@ -12,8 +12,8 @@ function App() {
       <Outlet />
       <ToastContainer
         pauseOnHover={false}
-        outClose={3000}
-        position="Bottom-right"
+        autoClose={3000}
+        position="bottom-right"
       />
       <Footer />
     </div>

@@ -6,6 +6,8 @@
   --cor10: #f5f5f5;
   --heightNavBar: 60px;
   --heightFooter: 60px;
+  --text: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+  --corBorder:  #00000014;
  
 }
 
@@ -14,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
+
 }
 
 *::first-letter {
