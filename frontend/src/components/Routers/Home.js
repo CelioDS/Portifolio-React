@@ -1,6 +1,7 @@
 import style from "./Home.module.css";
 import Container from "../Item-Layout/Container";
 import RenameTitle from "../Tools/RenameTitle";
+import LinkButton from "../Item-Layout/LinkButton";
 
 export default function Home() {
   return (
@@ -17,17 +18,16 @@ export default function Home() {
         </p>
         <h1>Sobre mim</h1>
         <p>
-          Sou formado em Análise e Desenvolvimento de Sistemas e atualmente
-          estou cursando uma Pós-Graduação em Ciência de Dados e Inteligência
-          Artificial. Tenho um grande interesse em explorar soluções inovadoras
-          e transformar ideias em realidade por meio da tecnologia.
+          Sou formado em Análise e Desenvolvimento de Sistemas e Pós-Graduado em
+          Ciência de Dados e Inteligência Artificial. Tenho um grande interesse
+          em explorar soluções inovadoras e transformar ideias em realidade por
+          meio da tecnologia.
         </p>
         <p>
-          Sou formado em Análise e Desenvolvimento de Sistemas, com experiência
-          em desenvolvimento e análise de dados. Programação: HTML, CSS,
-          JavaScript, SQL, ReactJS, NodeJS, PHP e Python Análise de Dados:
-          Excel, Power BI, SQL e Python Além disso, tenho experiência como
-          Assistente de TI, atuando em atendimento e suporte ao cliente,
+          Com experiência em desenvolvimento e análise de dados. Programação:
+          HTML, CSS, JavaScript, SQL, ReactJS, NodeJS, PHP e Python Análise de
+          Dados: Excel, Power BI, SQL e Python. Além disso, tenho experiência
+          como Assistente de TI, atuando em atendimento e suporte ao cliente,
           instalação de software e desenvolvimento de websites com uso de
           JavaScript, React, CSS e HTML
         </p>
@@ -46,19 +46,22 @@ export default function Home() {
           </li>
         </ul>
 
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
+        <footer>
+          <LinkButton
+            to="/Projetos"
+            text={"veja os projetos"}
+          />
 
-        <a
-          className={style.btnCV}
-          href="/arquivos/CelioDaSilvaTI.pdf"
-          download=""
-          id="btn"
-          title="Baixar curriculo"
-        >
-          Download CV
-        </a>
+          <a
+            className={style.btnCV}
+            href="/arquivos/CelioDaSilvaTI.pdf"
+            download=""
+            id="btn"
+            title="Baixar curriculo"
+          >
+            Download CV
+          </a>
+        </footer>
       </main>
     </Container>
   );

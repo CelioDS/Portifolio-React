@@ -2,12 +2,17 @@ import Container from "../Item-Layout/Container";
 import RenameTitle from "../Tools/RenameTitle";
 import style from "./Projetos.module.css";
 import { toast } from "react-toastify";
+import LoadingSVG from "../Item-Layout/Loading";
 
 import { BsLink, BsHandThumbsUp } from "react-icons/bs";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Projetos() {
-  const [DataBase, setDataBase] = useState(null);
+  const [DataBase, setDataBase] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [arrayIDLike, setArrayIDLike] = useState(
+    JSON.parse(localStorage.getItem("arrayId")) || []
+  );
 
   const GetDataBase = async () => {
     try {
@@ -22,17 +27,28 @@ export default function Projetos() {
       });
 
       const data = await response.json();
-      toast.success("Dados carregados com sucesso!");
+      setTimeout(() => {
+        setLoading(false);
+        toast.success("Dados carregados com sucesso!");
+      }, 100);
+
       setDataBase(data);
     } catch (error) {
       toast.error("Erro na base de dados!");
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     GetDataBase();
   }, [setDataBase]);
+
+  useEffect(() => {
+    localStorage.setItem("arrayId", JSON.stringify(arrayIDLike));
+  }, [arrayIDLike]);
+
   const setLike = async (id) => {
+    const likeTrue = localStorage.getItem(id);
+
     try {
       // 1. Busca o projeto pelo ID
       const projetoResponse = await fetch(
@@ -47,7 +63,22 @@ export default function Projetos() {
       const projeto = await projetoResponse.json();
 
       // 3. Incrementa o valor de "like" do projeto
-      const updatedLike = projeto.like + 1;
+      localStorage.setItem(id, "true");
+      let updatedLike = 0;
+      if (likeTrue) {
+        updatedLike = projeto.like - 1;
+        localStorage.removeItem(id);
+        setArrayIDLike((prevArray) => prevArray.filter((item) => item !== id));
+      } else {
+        updatedLike = projeto.like + 1;
+      }
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i); // Obtém a chave no índice atual
+        if (key === id) {
+          setArrayIDLike((prevArray) => [...prevArray, id]);
+        }
+      }
 
       // 4. Atualiza o valor de "like" no backend usando o método PATCH
       const updateResponse = await fetch(
@@ -91,11 +122,12 @@ export default function Projetos() {
         <RenameTitle initialTitle={"C&Lio - Projetos"} />
         <header>
           <h1> projetos</h1>
-          <p>Aqui esta alguns do meu projetos.</p>
+          <p>Aqui esta alguns do meus projetos.</p>
         </header>
-
+        {loading && <LoadingSVG />}
         <section>
           {DataBase &&
+            !loading &&
             DataBase.map(
               ({
                 id,
@@ -111,7 +143,7 @@ export default function Projetos() {
                   <header>
                     <aside>
                       <img
-                        src="arquivos/foto.jpeg"
+                        src="arquivos/foto.webp"
                         alt="foto perfil"
                         title="foto perfil"
                       />
@@ -119,7 +151,7 @@ export default function Projetos() {
 
                     <aside>
                       <h2>{nome}</h2>
-                      <p>Desenvolver FrontEnd | ReactJs | Analista de dados</p>
+                      <p>Desenvolver FrontEnd | ReactJs | Analista De Dados</p>
                       <p>Célio Da Silva</p>
                     </aside>
                     <aside>
@@ -174,14 +206,36 @@ export default function Projetos() {
 
                   <footer>
                     <button
+                      aria-label={
+                        arrayIDLike.includes(id) ? "Descurtir" : "Curtir"
+                      }
+                      title={arrayIDLike.includes(id) ? "Descurtir" : "Curtir"}
+                      style={{
+                        background: arrayIDLike.includes(id) ? "#07083b" : "",
+                        color: arrayIDLike.includes(id) ? "#b98639" : "",
+                      }}
                       onClick={() => {
                         setLike(id);
                       }}
                     >
-                      Gostei &nbsp; <BsHandThumbsUp />
+                      Curtir&nbsp; &nbsp; <BsHandThumbsUp />
                     </button>
-                    <aside>
-                      <BsHandThumbsUp /> {like}
+
+                    <aside
+                      style={{
+                        background: arrayIDLike.includes(id) ? "#07083b" : "",
+                        color: arrayIDLike.includes(id) ? "#b98639" : "",
+                      }}
+                    >
+                      <BsHandThumbsUp
+                        style={{
+                          color: arrayIDLike.includes(id) ? "#b98639" : "",
+                        }}
+                      />{" "}
+                      &nbsp;
+                      {like > 1 && arrayIDLike.includes(id)
+                        ? `Voce e ${like-1} ${like > 2 ? "pessoas" : "pessoa"} `
+                        : like}
                     </aside>
                   </footer>
                 </article>
@@ -192,7 +246,7 @@ export default function Projetos() {
             src="https://www.linkedin.com/embed/feed/update/urn:li:share:7278417019144667136"
             height="605"
             width="504"
-            frameborder="0"
+            style={{ border: "none" }}
             allowfullscreen=""
             title="Publicação incorporada"
           ></iframe>

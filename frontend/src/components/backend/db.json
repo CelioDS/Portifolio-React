@@ -2,43 +2,93 @@
   "Projetos": [
     {
       "id": "1",
-      "like": 3,
-      "nome": "Login e Cadastro de Usuário",
-      "descricao": "Um sistema completo de CRUD desenvolvido em PHP, com dois tipos de login: cliente e administrador.",
-      "tecnologias": "HTML, CSS, JavaScript, SweetAlert2, ViaCEP, PHP, SQL.",
-      "site": "",
-      "imagem": "https://celiotech.netlify.app/img/bancodedados_1_11zon.webp",
-      "repositorio": "https://github.com/CelioDS/Projetos-PHP/tree/main/loginBanco"
+      "like": 4,
+      "nome": "To Do List React",
+      "descricao": "Aplicação para organização de tarefas que utiliza ReactJS para a interface do usuário, Node.js no backend, Axios para comunicação com o servidor e SQL para armazenamento de dados.",
+      "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/todoreact.webp",
+      "site": "https://todoreacthitss.netlify.app",
+      "repositorio": "https://github.com/CelioDS/CursoFront/tree/master/ToDoReact"
     },
     {
       "id": "2",
-      "like": 0,
-      "nome": "Jogo trol run",
-      "descricao": "Objetivo do jogo e conseguir o maior ponto possivel e desviar dos obstaculo.",
-      "tecnologias": "HTML, CSS, JavaScript, PHP, SQL.",
-      "site": "http://jogotrol.space/",
+      "like": 2,
+      "nome": "Jogo Trol Run",
+      "descricao": "O Objetivo do Jogo é alcançar a maior pontuação possível enquanto desvia de obstáculos e a velocidade aumenta. O jogo conta com um Banco De Dados online e um localStorage.",
+      "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, PHP, SQL.",
+      "site": "http://jogotrol.space",
       "imagem": "https://celiotech.netlify.app/img/jogotrol_3_11zon.webp",
       "repositorio": "https://github.com/CelioDS/Projetos-PHP/tree/main/jogomario"
     },
     {
       "id": "3",
-      "like": 0,
-      "nome": "finan01ceiro",
-      "descricao": "Sistem consta com um API rest e um banco de dados SQL.",
-      "tecnologias": "HTML, CSS, JavaScript, RectJS, NodeJS e SQL.",
-      "site": "https://finan01ceiro.netlify.app/",
-      "imagem": "",
+      "like": 2,
+      "nome": "Finan01ceiro",
+      "descricao": "Sistema fullstack para gerenciamento financeiro, com API REST e Banco De Dados SQL.",
+      "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
+      "site": "https://finan01ceiro.netlify.app",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/finaceiro.webp",
       "repositorio": "https://github.com/CelioDS/AppReciclagem-"
     },
     {
-      "id": "",
-      "like": 0,
-      "nome": "",
-      "descricao": "",
-      "tecnologias": "",
-      "imagem": "",
-      "site": "",
-      "repositorio": ""
+      "id": "4",
+      "like": 2,
+      "nome": "Login e Cadastro de Usuário",
+      "descricao": "Sistema completo de CRUD desenvolvido em PHP, com suporte a dois tipos de login: cliente e administrador.",
+      "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, SweetAlert2, ViaCEP, PHP, SQL.",
+      "site": "https://www.linkedin.com/in/celiodasilva01",
+      "imagem": "https://celiotech.netlify.app/img/bancodedados_1_11zon.webp",
+      "repositorio": "https://github.com/CelioDS/Projetos-PHP/tree/main/loginBanco"
+    },
+    {
+      "id": "5",
+      "like": 1,
+      "nome": "Algemas de Ouro",
+      "descricao": "Site institucional desenvolvido para uma agência de detetives.",
+      "tecnologias": "HTML, CSS e JavaScript.",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/algemas.webp",
+      "site": "https://algemasdeouro.netlify.app",
+      "repositorio": "https://github.com/CelioDS/Projetos-JS/tree/main/algemasdeouro"
+    },
+    {
+      "id": "6",
+      "like": 1,
+      "nome": "Business Here",
+      "descricao": "Plataforma para cadastro e gerenciamento de empresas, com funcionalidades fullstack.",
+      "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/sitebussines.webp",
+      "site": "https://businesshere.netlify.app",
+      "repositorio": "https://github.com/CelioDS/Projetos-React/tree/main/fullstack%20business"
+    },
+    {
+      "id": "7",
+      "like": 1,
+      "nome": "Site de Clima",
+      "descricao": "Aplicação que detecta sua localização e fornece informações climáticas em tempo real.",
+      "tecnologias": "HTML, CSS e JavaScript.",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/api2.webp",
+      "site": "https://climahere.netlify.app",
+      "repositorio": "https://github.com/CelioDS/Projetos-JS/tree/main/climahere"
+    },
+    {
+      "id": "8",
+      "like": 1,
+      "nome": "Site sobre Peixes",
+      "descricao": "Plataforma com informações sobre criação de peixes, incluindo uma calculadora para dimensionamento de aquários.",
+      "tecnologias": "HTML, CSS, Bootstrap e JavaScript.",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/sitepeixe.webp",
+      "site": "https://peixescuidados.netlify.app",
+      "repositorio": "https://github.com/CelioDS/Projetos-JS/tree/main/sitePeixe"
+    },
+    {
+      "id": "9",
+      "like": 1,
+      "nome": "Site sobre Computadores",
+      "descricao": "Site informativo sobre periféricos de computadores e suas utilizações.",
+      "tecnologias": "HTML, CSS e JavaScript.",
+      "imagem": "https://multiversiontech.netlify.app/img/sites/sitepc.webp",
+      "site": "https://multiversiontech.netlify.app",
+      "repositorio": "https://github.com/CelioDS/Projetos-JS/tree/main/siteComputador"
     }
   ]
 }

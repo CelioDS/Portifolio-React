@@ -33,17 +33,28 @@
   background-color: var(--cor30);
 }
 
-.main .btnCV {
+.main .btnCV, .main footer a {
+  text-decoration: none;
   background-color: var(--cor60);
   color: var(--cor30);
   padding: 10px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 1s all;
   margin-top: 30px;
   margin-bottom: 30px;
   filter: drop-shadow(5px 5px 5px #000000);
+  font-weight: 600;
 }
-.main .btnCV:hover {
+.main .btnCV:hover, .main footer a:hover {
   background-color: var(--cor30);
   color: var(--cor60);
+}
+
+.main footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  width: 100%;
 }

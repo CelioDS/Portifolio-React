@@ -92,7 +92,7 @@
   width: 48px; /* Tamanho do círculo */
   height: 48px;
   border-radius: 50%; /* Cria o formato circular */
-  background-image: url("../../../public/arquivos/foto.jpeg");
+  background-image: url("../../../public/arquivos/foto.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -102,6 +102,7 @@
   padding-left: 15px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: 600;
+  text-transform: capitalize;
 }
 .main > section > article > header > aside > p {
   color: var(--corP);
@@ -148,12 +149,14 @@
   background: none;
   display: inline-flex;
   align-items: center;
+  text-align: center;
   color: #afaeae;
   cursor: pointer;
   font-size: 14px;
 }
-.main > section > article > footer > button:hover {
-  background-color: var(--cor30);
+.main > section > article > footer > button:hover,
+.main > section > article > footer > button:hover ~ aside {
+  background-color: #ccc;
   color: var(--cor60);
 }
 
@@ -166,10 +169,10 @@
   text-align: center;
   color: #afaeae;
   font-size: 14px;
+  width: 200px;
 }
-.main > section > article > footer > aside svg {
-  color: var(--cor30);
-}
+
+
 
 @media (max-width: 1000px) {
   .main > section {
