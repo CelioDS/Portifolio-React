@@ -19,7 +19,7 @@ export default function Projetos() {
       const url =
         process.env.REACT_APP_API_URL ||
         "http://localhost:5000/database" ||
-        "https://celioportifolio.netlify.app";
+        "https://raw.githubusercontent.com/CelioDS/Portifolio-React/refs/heads/main/frontend/src/components/backend/db.json";
 
       const response = await fetch(url, {
         method: "GET",
