@@ -2,7 +2,7 @@
   "database": [
     {
       "id": "1",
-      "like": 0,
+      "like": 1,
       "nome": "To Do List React",
       "descricao": "Aplicação para organização de tarefas que utiliza ReactJS para a interface do usuário, Node.js no backend, Axios para comunicação com o servidor e SQL para armazenamento de dados.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
@@ -12,7 +12,7 @@
     },
     {
       "id": "2",
-      "like": 0,
+      "like": 2,
       "nome": "Jogo Trol Run",
       "descricao": "O Objetivo do Jogo é alcançar a maior pontuação possível enquanto desvia de obstáculos e a velocidade aumenta. O jogo conta com um Banco De Dados online e um localStorage.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, PHP, SQL.",
@@ -22,7 +22,7 @@
     },
     {
       "id": "3",
-      "like": 0,
+      "like": 2,
       "nome": "Finan01ceiro",
       "descricao": "Sistema fullstack para gerenciamento financeiro, com API REST e Banco De Dados SQL.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
@@ -32,7 +32,7 @@
     },
     {
       "id": "4",
-      "like": 0,
+      "like": 2,
       "nome": "Login e Cadastro de Usuário",
       "descricao": "Sistema completo de CRUD desenvolvido em PHP, com suporte a dois tipos de login: cliente e administrador.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, SweetAlert2, ViaCEP, PHP, SQL.",
@@ -42,7 +42,7 @@
     },
     {
       "id": "5",
-      "like": 0,
+      "like": 2,
       "nome": "Algemas de Ouro",
       "descricao": "Site institucional desenvolvido para uma agência de detetives.",
       "tecnologias": "HTML, CSS e JavaScript.",
@@ -52,7 +52,7 @@
     },
     {
       "id": "6",
-      "like": 0,
+      "like": 2,
       "nome": "Business Here",
       "descricao": "Plataforma para cadastro e gerenciamento de empresas, com funcionalidades fullstack.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
@@ -62,7 +62,7 @@
     },
     {
       "id": "7",
-      "like": 0,
+      "like": 2,
       "nome": "Site de Clima",
       "descricao": "Aplicação que detecta sua localização e fornece informações climáticas em tempo real.",
       "tecnologias": "HTML, CSS e JavaScript.",
@@ -72,7 +72,7 @@
     },
     {
       "id": "8",
-      "like": 0,
+      "like": 2,
       "nome": "Site sobre Peixes",
       "descricao": "Plataforma com informações sobre criação de peixes, incluindo uma calculadora para dimensionamento de aquários.",
       "tecnologias": "HTML, CSS, Bootstrap e JavaScript.",
@@ -82,7 +82,7 @@
     },
     {
       "id": "9",
-      "like": 0,
+      "like": 2,
       "nome": "Site sobre Computadores",
       "descricao": "Site informativo sobre periféricos de computadores e suas utilizações.",
       "tecnologias": "HTML, CSS e JavaScript.",
