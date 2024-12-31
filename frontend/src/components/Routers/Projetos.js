@@ -10,14 +10,25 @@ import { useEffect, useState } from "react";
 export default function Projetos() {
   const [DataBase, setDataBase] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [online, setOnline] = useState(false);
   const [arrayIDLike, setArrayIDLike] = useState(
     JSON.parse(localStorage.getItem("arrayId")) || []
   );
 
-  const GetDataBase = async () => {
-    const url = "http://localhost:5000/database";
+  async function checkIfOnline() {
     try {
-      if (url) {
+      const response = await fetch("http://localhost:5000/database", { method: "HEAD" }); // Apenas verifica a conexão
+      setOnline(true);
+      return response.ok; // Retorna true se o status for 200-299
+    } catch (error) {
+      setOnline(false);
+      return false; // Retorna false em caso de erro
+    }
+  }
+
+  const GetDataBase = async () => {
+    try {
+      if (online) {
         const url =
           process.env.REACT_APP_API_URL ||
           "http://localhost:5000/database" ||
@@ -47,7 +58,7 @@ export default function Projetos() {
           toast.success("Dados carregados com sucesso!");
         }, 100);
         setDataBase(data.database);
-        console.log('')
+        console.log("");
       }
     } catch (error) {
       toast.error("Erro na base de dados!");
@@ -56,6 +67,7 @@ export default function Projetos() {
 
   useEffect(() => {
     GetDataBase();
+    checkIfOnline();
   }, [setDataBase]);
 
   useEffect(() => {
