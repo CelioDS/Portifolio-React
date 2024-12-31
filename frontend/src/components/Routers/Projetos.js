@@ -261,14 +261,7 @@ export default function Projetos() {
               )
             )}
 
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7278417019144667136"
-            height="605"
-            width="504"
-            style={{ border: "none" }}
-            allowfullscreen=""
-            title="Publicação incorporada"
-          ></iframe>
+        
         </section>
       </main>
     </Container>
