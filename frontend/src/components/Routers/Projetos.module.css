@@ -29,6 +29,8 @@
   display: flex;
   align-items: start;
   flex-direction: column;
+  background-color: white;
+  filter: drop-shadow(5px 5px 5px #ebe9e9);
 }
 .main > section > article > h3 {
   margin-top: 15px;
@@ -120,8 +122,11 @@
 }
 
 .main > section > article > aside > p {
-  color: var(--corP);
   font-size: 12px;
+  color: var(--corH1);
+}
+.main > section > article > aside > p > a {
+  color: #0a66c2;
 }
 
 .main > section > article > img {
@@ -162,14 +167,14 @@
 
 .main > section > article > footer > aside {
   border: none;
-  padding: 8px 15px;
+
   background-color: none;
   display: inline-flex;
   align-items: center;
   text-align: center;
   color: #afaeae;
   font-size: 14px;
-  width: 200px;
+  width: 146px;
 }
 .main > section > article > footer > button:hover ~ aside {
   color: var(--cor60);

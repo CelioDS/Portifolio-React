@@ -237,13 +237,13 @@ export default function Projetos() {
 
                     <aside
                       style={{
-                        color: arrayIDLike.includes(id) ? "#07083b" : "",
+                        color: arrayIDLike.includes(id) ? "#b98639" : "",
                       }}
                     >
                       {arrayIDLike.includes(id) ? (
                         <BsHandThumbsUpFill
                           style={{
-                            color: arrayIDLike.includes(id) ? "#07083b" : "",
+                            color: arrayIDLike.includes(id) ? "#b98639" : "",
                           }}
                         />
                       ) : (
@@ -260,8 +260,6 @@ export default function Projetos() {
                 </article>
               )
             )}
-
-        
         </section>
       </main>
     </Container>
