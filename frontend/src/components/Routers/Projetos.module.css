@@ -144,18 +144,18 @@
 }
 
 .main > section > article > footer > button {
-  border: none;
   padding: 8px 15px;
-  background: none;
   display: inline-flex;
   align-items: center;
   text-align: center;
   color: #afaeae;
   cursor: pointer;
   font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid var(--corBorder);
+  width: 96px;
 }
-.main > section > article > footer > button:hover,
-.main > section > article > footer > button:hover ~ aside {
+.main > section > article > footer > button:hover {
   background-color: #ccc;
   color: var(--cor60);
 }
@@ -171,8 +171,9 @@
   font-size: 14px;
   width: 200px;
 }
-
-
+.main > section > article > footer > button:hover ~ aside {
+  color: var(--cor60);
+}
 
 @media (max-width: 1000px) {
   .main > section {

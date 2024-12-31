@@ -4,7 +4,7 @@ import style from "./Projetos.module.css";
 import { toast } from "react-toastify";
 import LoadingSVG from "../Item-Layout/Loading";
 
-import { BsLink, BsHandThumbsUp } from "react-icons/bs";
+import { BsLink, BsHandThumbsUp, BsHandThumbsUpFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
 export default function Projetos() {
@@ -17,7 +17,9 @@ export default function Projetos() {
   const GetDataBase = async () => {
     try {
       const url =
-        process.env.REACT_APP_API_URL || "http://localhost:5000/Projetos";
+        process.env.REACT_APP_API_URL ||
+        "http://localhost:5000/database" ||
+        "https://celioportifolio.netlify.app";
 
       const response = await fetch(url, {
         method: "GET",
@@ -52,7 +54,8 @@ export default function Projetos() {
     try {
       // 1. Busca o projeto pelo ID
       const projetoResponse = await fetch(
-        `http://localhost:5000/Projetos/${id}`
+        `http://localhost:5000/database/${id}` ||
+          `https://celioportifolio.netlify.app/database/${id}`
       );
       if (!projetoResponse.ok) {
         // Se a resposta não for bem-sucedida, lança um erro
@@ -82,7 +85,8 @@ export default function Projetos() {
 
       // 4. Atualiza o valor de "like" no backend usando o método PATCH
       const updateResponse = await fetch(
-        `http://localhost:5000/Projetos/${id}`,
+        `http://localhost:5000/database/${id}` ||
+          `https://celioportifolio.netlify.app/database/${id}`,
         {
           method: "PATCH", // Define que estamos fazendo uma atualização parcial
           headers: {
@@ -218,23 +222,38 @@ export default function Projetos() {
                         setLike(id);
                       }}
                     >
-                      Curtir&nbsp; &nbsp; <BsHandThumbsUp />
+                      {arrayIDLike.includes(id) ? (
+                        <BsHandThumbsUpFill
+                          style={{
+                            color: arrayIDLike.includes(id) ? "#b98639" : "",
+                          }}
+                        />
+                      ) : (
+                        <BsHandThumbsUp />
+                      )}
+                      &nbsp; &nbsp;
+                      {arrayIDLike.includes(id) ? "Curtiu" : "Curtir"}
                     </button>
 
                     <aside
                       style={{
-                        background: arrayIDLike.includes(id) ? "#07083b" : "",
-                        color: arrayIDLike.includes(id) ? "#b98639" : "",
+                        color: arrayIDLike.includes(id) ? "#07083b" : "",
                       }}
                     >
-                      <BsHandThumbsUp
-                        style={{
-                          color: arrayIDLike.includes(id) ? "#b98639" : "",
-                        }}
-                      />{" "}
+                      {arrayIDLike.includes(id) ? (
+                        <BsHandThumbsUpFill
+                          style={{
+                            color: arrayIDLike.includes(id) ? "#07083b" : "",
+                          }}
+                        />
+                      ) : (
+                        <BsHandThumbsUp />
+                      )}
                       &nbsp;
                       {like > 1 && arrayIDLike.includes(id)
-                        ? `Voce e ${like-1} ${like > 2 ? "pessoas" : "pessoa"} `
+                        ? `Voce e ${like - 1} ${
+                            like > 2 ? "pessoas" : "pessoa"
+                          } `
                         : like}
                     </aside>
                   </footer>
