@@ -10,3 +10,6 @@ Experiências
 Front-End: Html, Css, JavaScript, Bootstrap e ReactJS.
 Back-End: Criação de APIs REST utilizando PHP, SQL, Node.js e MySQL.
 Analise de Dados: SQL, Excel, PowerBI e Python.
+
+
+hospedagem do site: https://celioportifolio.netlify.app/
