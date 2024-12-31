@@ -15,16 +15,21 @@ export default function Projetos() {
     JSON.parse(localStorage.getItem("arrayId")) || []
   );
 
-  async function checkIfOnline() {
-    try {
-      const response = await fetch("http://localhost:5000/database", { method: "HEAD" }); // Apenas verifica a conexão
-      setOnline(true);
-      return response.ok; // Retorna true se o status for 200-299
-    } catch (error) {
-      setOnline(false);
-      return false; // Retorna false em caso de erro
+  useEffect(() => {
+    async function checkIfOnline() {
+      try {
+        const response = await fetch("http://localhost:5000/database", {
+          method: "HEAD",
+        }); // Apenas verifica a conexão
+        setOnline(true);
+        return response.ok; // Retorna true se o status for 200-299
+      } catch (error) {
+        setOnline(false);
+        return false; // Retorna false em caso de erro
+      }
     }
-  }
+    checkIfOnline();
+  }, [setOnline]);
 
   const GetDataBase = async () => {
     try {
@@ -67,7 +72,7 @@ export default function Projetos() {
 
   useEffect(() => {
     GetDataBase();
-    checkIfOnline();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setDataBase]);
 
   useEffect(() => {
