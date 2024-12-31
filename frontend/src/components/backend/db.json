@@ -12,7 +12,7 @@
     },
     {
       "id": "2",
-      "like": 2,
+      "like": 1,
       "nome": "Jogo Trol Run",
       "descricao": "O Objetivo do Jogo é alcançar a maior pontuação possível enquanto desvia de obstáculos e a velocidade aumenta. O jogo conta com um Banco De Dados online e um localStorage.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, PHP, SQL.",
