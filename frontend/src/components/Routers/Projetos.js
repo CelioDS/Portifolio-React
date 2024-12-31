@@ -19,6 +19,7 @@ export default function Projetos() {
     try {
       if (url) {
         const url =
+          process.env.REACT_APP_API_URL ||
           "http://localhost:5000/database" ||
           "https://raw.githubusercontent.com/CelioDS/Portifolio-React/refs/heads/main/frontend/src/components/backend/db.json";
         const response = await fetch(url, {
@@ -39,14 +40,14 @@ export default function Projetos() {
           "https://raw.githubusercontent.com/CelioDS/Portifolio-React/refs/heads/main/frontend/src/components/backend/db.json";
 
         const response = await fetch(url);
-        console.log('response')
 
         const data = await response.json();
         setTimeout(() => {
           setLoading(false);
           toast.success("Dados carregados com sucesso!");
         }, 100);
-        setDataBase(data.Projetos);
+        setDataBase(data.database);
+        console.log('')
       }
     } catch (error) {
       toast.error("Erro na base de dados!");
