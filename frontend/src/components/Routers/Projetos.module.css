@@ -95,7 +95,7 @@
   width: 48px; /* Tamanho do círculo */
   height: 48px;
   border-radius: 50%; /* Cria o formato circular */
-  background-image: url("../../../public/arquivos/foto.webp");
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -216,5 +216,11 @@
     word-break: break-word; /* Permite a quebra de palavras longas */
     overflow-wrap: break-word; /* Garante a quebra de palavras longas */
     white-space: normal; /* Permite que o texto quebre em várias linhas */
+  }
+
+  .main > section > article > header > aside > p {
+    display: flex;
+    align-items: center;
+    text-align: center;  
   }
 }
