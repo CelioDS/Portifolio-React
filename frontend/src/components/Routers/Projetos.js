@@ -11,6 +11,7 @@ export default function Projetos() {
   const [DataBase, setDataBase] = useState([]);
   const [loading, setLoading] = useState(true);
   const [online, setOnline] = useState(false);
+  const [textBD, settextBD] = useState('');
   const [arrayIDLike, setArrayIDLike] = useState(
     JSON.parse(localStorage.getItem("arrayId")) || []
   );
@@ -22,8 +23,10 @@ export default function Projetos() {
           method: "HEAD",
         }); // Apenas verifica a conexão
         setOnline(true);
+        settextBD("database intern")
         return response.ok; // Retorna true se o status for 200-299
       } catch (error) {
+        settextBD("database extern")
         setOnline(false);
         return false; // Retorna false em caso de erro
       }
@@ -36,8 +39,7 @@ export default function Projetos() {
       if (online) {
         const url =
           process.env.REACT_APP_API_URL ||
-          "http://localhost:5000/database" ||
-          "https://raw.githubusercontent.com/CelioDS/Portifolio-React/refs/heads/main/frontend/src/components/backend/db.json";
+          "http://localhost:5000/database";
         const response = await fetch(url, {
           method: "GET",
           headers: {
@@ -63,7 +65,6 @@ export default function Projetos() {
           toast.success("Dados carregados com sucesso!");
         }, 100);
         setDataBase(data.database);
-        console.log("");
       }
     } catch (error) {
       toast.error("Erro na base de dados!");
@@ -156,7 +157,7 @@ export default function Projetos() {
       <main className={style.main}>
         <RenameTitle initialTitle={"C&Lio - Projetos"} />
         <header>
-          <h1> projetos</h1>
+          <h1> projetos {textBD}</h1>
           <p>Aqui esta alguns do meus projetos.</p>
         </header>
         {loading && <LoadingSVG />}

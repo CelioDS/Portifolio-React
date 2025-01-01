@@ -2,7 +2,7 @@
   "database": [
     {
       "id": "1",
-      "like": 1,
+      "like": 2,
       "nome": "To Do List React",
       "descricao": "Aplicação para organização de tarefas que utiliza ReactJS para a interface do usuário, Node.js no backend, Axios para comunicação com o servidor e SQL para armazenamento de dados.",
       "tecnologias": "HTML, CSS, JavaScript, Banco De Dados, ReactJS, NodeJS e SQL.",
