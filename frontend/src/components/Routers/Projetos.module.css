@@ -131,7 +131,6 @@
 }
 .main > section > article > aside > p > a {
   color: #0a66c2;
-  text-wrap: wrap;
 }
 
 .main > section > article > img {
@@ -210,6 +209,10 @@
     flex-direction: column;
     text-align: center;
     width: 100%;
-  
+  }
+  .main > section > article > aside > p a {
+    word-break: break-word; /* Permite a quebra de palavras longas */
+    overflow-wrap: break-word; /* Garante a quebra de palavras longas */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
   }
 }
